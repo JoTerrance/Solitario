@@ -1,7 +1,7 @@
 package Ejercicio007;
 
-import java.applet.Applet;
 import java.awt.Graphics;
+import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 
 public class SecondDeck {
@@ -30,8 +30,8 @@ public class SecondDeck {
 		secondDeck.get(secondDeck.size() - 1).y = CARDPOSY;
 	}
 
-	public void showCard(Graphics g, Applet ap) {
+	public void showCard(Graphics g, ImageObserver observer) {
 		for (int i = 0; i < secondDeck.size(); i++)
-			secondDeck.get(i).draw(g, ap);
+			secondDeck.get(i).draw(g, observer);
 	}
 }

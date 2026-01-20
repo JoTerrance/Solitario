@@ -1,9 +1,9 @@
 package Ejercicio007;
 
-import java.applet.Applet;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
 
 public class Card extends Rectangle {
     public static final int WIDTH = 70;
@@ -60,7 +60,7 @@ public class Card extends Rectangle {
         this.value = value;
     }
 
-	public void draw(Graphics g, Applet ap) {
-		g.drawImage(image, x, y, WIDTH, HEIGHT, ap);
+	public void draw(Graphics g, ImageObserver observer) {
+		g.drawImage(image, x, y, WIDTH, HEIGHT, observer);
 	}
 }

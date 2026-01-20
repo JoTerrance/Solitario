@@ -1,9 +1,9 @@
 package Ejercicio007;
 
-import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
 
 public class SuitDeck extends Rectangle {
 	java.util.ArrayList<Card> deck;
@@ -15,11 +15,11 @@ public class SuitDeck extends Rectangle {
 		deck = new java.util.ArrayList<Card>();
 	}
 
-	public void draw(Graphics g, Applet ap) {
+	public void draw(Graphics g, ImageObserver observer) {
 		g.setColor(Color.BLACK);
 		g.drawRect(x, y, width, height);
 		for (int i = 0; i < deck.size(); i++)
-			deck.get(i).draw(g, ap);
+			deck.get(i).draw(g, observer);
 	}
 
 	public void relocateSuitCard() {
